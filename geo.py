@@ -31,9 +31,9 @@ def get_coordinates(city_name):
         return long, lat
     except Exception as e:
         return e
-      
-   
-  def get_country(city_name):
+
+
+def get_country(city_name):
     try:
         url = "https://geocode-maps.yandex.ru/1.x/"
         params = {
@@ -48,8 +48,7 @@ def get_coordinates(city_name):
             'GeocoderMetaData']['AddressDetails']['Country']['CountryName']
     except Exception as e:
         return e
-      
-      
+
 
 def get_distance(p1, p2):
     # p1 и p2 - это кортежи из двух элементов - координаты точек
@@ -67,4 +66,4 @@ def get_distance(p1, p2):
     c = 2 * math.atan2(a ** 0.5, (1 - a) ** 0.5)
 
     distance = radius * c
-    return distance      
+    return distance
